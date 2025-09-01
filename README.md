@@ -1,0 +1,58 @@
+Bahut sahi soch hai bhai 👌. Aise hi project diary maintain karna long-term me tujhe confidence aur progress ka real proof dikhayega. Chal mai tere liye ek **README.md ka structure** bana deta hu, jisme features roadmap + daily log section hoga. Tu ise apne repo me daal sakta hai aur roj update kar sakta hai.
+
+---
+
+# 📖 Profile Editor App (React)
+
+## 📝 Project Overview
+
+A step-by-step learning-based project to build a **Profile Editor App** in React.
+The goal is not just to finish the app, but to **enhance React skills** by building features one by one with proper guidance, research, and self-coding (no copy-paste).
+
+---
+
+## 🚀 Features Roadmap
+
+### ✅ Basic Features
+
+* [ ] Display Profile (`ProfileCard`)
+* [ ] Edit Profile (`ProfileForm`)
+* [ ] Toggle between View & Edit mode
+* [ ] Save & Cancel functionality
+
+### 🔄 Intermediate Features
+
+* [ ] Controlled Inputs for form fields (name, email, phone, bio)
+* [ ] Validation for fields (email format, required fields)
+* [ ] Cancel resets the form (no unwanted changes)
+* [ ] Reusable Input & Button components
+
+### 🎨 UX Enhancements
+
+* [ ] Success / Error message alerts
+* [ ] Animations (Framer Motion) while switching modes
+* [ ] Avatar upload (basic base64)
+
+### 📦 Advanced Features
+
+* [ ] LocalStorage persistence
+* [ ] Profile data via API (GET / PUT)
+* [ ] Tabs for Profile sections (General Info, Preferences, Security)
+* [ ] Cloudinary / Backend integration for avatar
+
+---
+
+## 📅 Daily Progress Log
+
+| Date       | Work Planned                                  | Work Done | Notes / Blockers     |
+| ---------- | --------------------------------------------- | --------- | -------------------- |
+| 2025-09-01 | Setup file structure, decide flow (Card/Form) | ✅ Done    | Base structure ready |
+| YYYY-MM-DD | Toggle edit/display mode                      | ⬜ Pending |                      |
+| YYYY-MM-DD | Save/Cancel feature implementation            | ⬜ Pending |                      |
+| YYYY-MM-DD | Validation for inputs                         | ⬜ Pending |                      |
+| YYYY-MM-DD | Avatar upload                                 | ⬜ Pending |                      |
+| YYYY-MM-DD | LocalStorage persistence                      | ⬜ Pending |                      |
+
+---
+
+
