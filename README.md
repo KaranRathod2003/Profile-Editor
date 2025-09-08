@@ -44,15 +44,16 @@ The goal is not just to finish the app, but to **enhance React skills** by build
 
 ## 📅 Daily Progress Log
 
-| Date       | Work Planned                                  | Work Done | Notes / Blockers     |
-| ---------- | --------------------------------------------- | --------- | -------------------- |
-| 2025-09-01 | Setup file structure, decide flow (Card/Form) | ✅ Done    | Base structure ready |
-| YYYY-MM-DD | Toggle edit/display mode                      | ⬜ Pending |                      |
-| YYYY-MM-DD | Save/Cancel feature implementation            | ⬜ Pending |                      |
-| YYYY-MM-DD | Validation for inputs                         | ⬜ Pending |                      |
-| YYYY-MM-DD | Avatar upload                                 | ⬜ Pending |                      |
-| YYYY-MM-DD | LocalStorage persistence                      | ⬜ Pending |                      |
+| Date       | Work Planned                                      | Work Done         | Notes / Blockers                                         |
+| ---------- | ------------------------------------------------- | ----------------- | -------------------------------------------------------- |
+| 2025-09-01 | Setup file structure, decide flow (Card/Form)     | ✅ Done            | Base structure ready                                     |
+| 2025-09-08 | Toggle edit/display mode                          | ✅ Done            | `isEditing` state implemented, ternary operator used     |
+| 2025-09-08 | Controlled inputs for profile fields              | ✅ Done            | `profileData` state, single `handleChange` function used |
+| 2025-09-08 | Save / Cancel functionality                       | ✅ Done            | `backupProfileData` implemented for Cancel revert        |
+| 2025-09-08 | Separate handlers for each field (name/email/bio) | ✅ Done (optional) | Later replaced by single `handleChange`                  |
+| 2025-09-08 | Props passing to Card and Form                    | ✅ Done            | All callbacks and data correctly passed                  |
+| 2025-09-08 | UI basics for Card and Form                       | ✅ Done            | Basic styling, flex layout, buttons implemented          |
+| 2025-09-09 | Validation, Avatar upload, LocalStorage           | ⬜ Pending         | Next features planned                                    |
 
----
 
 
