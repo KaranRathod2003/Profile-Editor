@@ -42,6 +42,9 @@ The goal is not just to finish the app, but to **enhance React skills** by build
 
 ---
 
+
+---
+
 ## 📅 Daily Progress Log
 
 | Date       | Work Planned                                      | Work Done         | Notes / Blockers                                         |
@@ -53,7 +56,25 @@ The goal is not just to finish the app, but to **enhance React skills** by build
 | 2025-09-08 | Separate handlers for each field (name/email/bio) | ✅ Done (optional) | Later replaced by single `handleChange`                  |
 | 2025-09-08 | Props passing to Card and Form                    | ✅ Done            | All callbacks and data correctly passed                  |
 | 2025-09-08 | UI basics for Card and Form                       | ✅ Done            | Basic styling, flex layout, buttons implemented          |
+| 2025-09-09 | Restructure frontend/backend + Git branching      | ✅ Done            | New folder structure created, merge successful           |
+| 2025-09-09 | README structure + roadmap                        | ✅ Done            | Maintained features + daily progress log                 |
 | 2025-09-09 | Validation, Avatar upload, LocalStorage           | ⬜ Pending         | Next features planned                                    |
+
+
+## 🛠️ Tech Stack
+- **Frontend:** React + Vite  
+- **Styling:** CSS  
+- **Components:** Material UI (Snackbar)  
+- **Package Manager:** npm  
+
+---
+
+## ⚙️ Setup and Run Locally
+
+1. Clone the repo  
+   ```bash
+   git clone https://github.com/KaranRathod2003/Profile-Editor.git
+   cd Profile-Editor/frontend
 
 
 
