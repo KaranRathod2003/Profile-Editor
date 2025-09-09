@@ -1,6 +1,3 @@
-Bahut sahi soch hai bhai 👌. Aise hi project diary maintain karna long-term me tujhe confidence aur progress ka real proof dikhayega. Chal mai tere liye ek **README.md ka structure** bana deta hu, jisme features roadmap + daily log section hoga. Tu ise apne repo me daal sakta hai aur roj update kar sakta hai.
-
----
 
 # 📖 Profile Editor App (React)
 
