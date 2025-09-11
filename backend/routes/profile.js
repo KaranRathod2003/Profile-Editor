@@ -1,18 +1,17 @@
 const express = require('express');
 
 
-const profile = {
-    name: 'Karan',
-    email : 'karan@rathod.com',
-    bio : 'hello world how are you...'
-}
+let profile = {};
 const router = express.Router();
 router.get('/', (req, res)=>{
-    res.send(profile);
+    res.json(profile);
 })
-
-// this is for app.get pattern
-// module.exports = profile;
+router.post('/', (req, res, next)=>{
+    const {name, email, bio} = req.body;
+    profile = {name, email, bio};
+    console.log("Updated Profile", profile);
+    res.json(profile);
+})
 
 module.exports = router;
 
