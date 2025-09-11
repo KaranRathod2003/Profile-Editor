@@ -37,8 +37,6 @@ The goal is not just to finish the app, but to **enhance React skills** by build
 * [ ] Tabs for Profile sections (General Info, Preferences, Security)
 * [ ] Cloudinary / Backend integration for avatar
 
----
-
 
 ---
 
@@ -56,6 +54,37 @@ The goal is not just to finish the app, but to **enhance React skills** by build
 | 2025-09-09 | Restructure frontend/backend + Git branching      | ✅ Done            | New folder structure created, merge successful           |
 | 2025-09-09 | README structure + roadmap                        | ✅ Done            | Maintained features + daily progress log                 |
 | 2025-09-09 | Validation, Avatar upload, LocalStorage           | ⬜ Pending         | Next features planned                                    |
+
+
+---
+
+## 🚀 Backend Features Added
+
+### ✅ Current Backend Features
+
+* [x] GET `/api/profile` — fetch current profile
+* [x] POST `/api/profile` — create / update profile; merges incoming fields with existing profile
+* [x] PUT `/api/profile` — update profile; merges only provided fields, existing fields stay intact
+* [ ] DELETE `/api/profile` — planned for future
+* [ ] MongoDB integration — planned
+
+### 💡 Notes / Behavior
+
+* Profile object stored in memory for now (`name`, `email`, `bio`)
+* POST/PUT merge ensures **only provided fields update**, rest remain unchanged
+* Console logs request body for debugging
+
+---
+
+## 📅 Daily Progress Log 
+
+| Date       | Work Planned                        | Work Done | Notes / Blockers                                   |
+| ---------- | ----------------------------------- | --------- | -------------------------------------------------- |
+| 2025-09-10 | Backend GET + POST API              | ✅ Done    | Profile object stored in memory, merge implemented |
+| 2025-09-10 | PUT API for partial updates         | ✅ Done    | Only updated fields overwrite, others stay intact  |
+| 2025-09-10 | Testing with Postman / console logs | ✅ Done    | Verified correct merging of profile fields         |
+
+
 
 
 ## 🛠️ Tech Stack
