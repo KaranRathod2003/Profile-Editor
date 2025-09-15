@@ -4,8 +4,8 @@ const mongoose = require("mongoose");
 const connectDB = async () => {
   try {
     await mongoose.connect("mongodb://127.0.0.1:27017/profileEditor", {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
+      // useNewUrlParser: true,
+      // useUnifiedTopology: true,
     });
     console.log("✅ MongoDB Connected...");
   } catch (error) {
