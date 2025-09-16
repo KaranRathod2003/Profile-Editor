@@ -53,7 +53,7 @@ The goal is not just to finish the app, but to **enhance React skills** by build
 | 2025-09-08 | UI basics for Card and Form                       | ✅ Done            | Basic styling, flex layout, buttons implemented          |
 | 2025-09-09 | Restructure frontend/backend + Git branching      | ✅ Done            | New folder structure created, merge successful           |
 | 2025-09-09 | README structure + roadmap                        | ✅ Done            | Maintained features + daily progress log                 |
-| 2025-09-09 | Validation, Avatar upload, LocalStorage           | ⬜ Pending         | Next features planned                                    |
+| 2025-09-09 | Validation, Avatar upload, LocalStorage           | ✅ Done         | Next features planned                                    |
 
 
 ---

@@ -107,7 +107,7 @@ import { useEffect } from 'react';
     }
     return (
       <>
-      <div className='flex justify-center items-center mt-auto'>
+      <div className='flex justify-center items-center min-h-screen'>
         {isEditing ? <ProfileForm handleChange = {handleChange} name = {profileData.name} email={profileData.email} bio={profileData.bio} handleCancel={handleCancel} handleSave={handleSave} /> : <ProfileCard name={profileData.name} email={profileData.email} bio={profileData.bio} handleEdit={handleEdit} />}
         <Snackbar 
           open = {alert.open}
