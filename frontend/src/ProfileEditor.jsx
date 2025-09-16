@@ -3,22 +3,33 @@
   import ProfileForm from './components/ProfileForm'
   import Alert from '@mui/material/Alert';
 import { Snackbar } from '@mui/material';
+import axios from 'axios';
+import { useEffect } from 'react';
+
 
 
 
   const ProfileEditor = () => {
     const [isEditing, setIsEditing] = useState(false);
-    const [profileData, setProfileData] = useState({
-      name: 'Your Name',
-      email: 'Your Email',
-      bio: 'Your Bio...'
-    })
+    const [profileData, setProfileData] = useState({    })
     const [alert, setAlert] = useState({
       open:false,
       message:"",
       type:""
     })
     const [backupProfileData, setBackupProfileData] = useState(profileData);
+
+
+    useEffect(()=>{
+      axios.get("http://localhost:5000/api/profile")
+      .then(res =>{
+        console.log("Profile Data: ", res.data);
+        setProfileData(res.data);
+      })
+      .catch(err =>{
+        console.error("Error fetching Data: ", err);
+            })
+    }, [])
 
 // single function for all change
     const handleChange = (e) =>{
@@ -63,9 +74,31 @@ import { Snackbar } from '@mui/material';
       setIsEditing(true)
     }
     const handleSave = () => {
-      // setProfileData()
-      setIsEditing(false)
-      setAlert({ open: true, type: "success", message: "Profile updated successfully!" });
+      if(!profileData._id){
+        axios.post("http://localhost:5000/api/profile", profileData)
+        .then(res =>{
+          setProfileData(res.data);
+          setIsEditing(false)
+          setAlert({ open: true, type: "success", message: "Profile updated successfully!" });
+        })
+        .catch(err =>{
+          console.error("Error creating profile: ", err);
+          setAlert({ open: true, type: "error", message: "Error creating profile" });
+        })
+      }
+      else{
+        axios.put(`http://localhost:5000/api/profile`, profileData)
+        .then(res =>{
+          setProfileData(res.data);
+          setIsEditing(false);
+          setAlert({ open: true, type: "success", message: "Profile updated successfully!" });
+        })
+        .catch(err =>{
+          console.error("Error in updating", err);
+          setAlert({ open: true, type: "error", message: "Error updating profile" });
+        })
+      }
+      
     }
     const handleCancel = () => {
       setProfileData(backupProfileData)
@@ -74,6 +107,7 @@ import { Snackbar } from '@mui/material';
     }
     return (
       <>
+      <div className='flex justify-center items-center mt-auto'>
         {isEditing ? <ProfileForm handleChange = {handleChange} name = {profileData.name} email={profileData.email} bio={profileData.bio} handleCancel={handleCancel} handleSave={handleSave} /> : <ProfileCard name={profileData.name} email={profileData.email} bio={profileData.bio} handleEdit={handleEdit} />}
         <Snackbar 
           open = {alert.open}
@@ -90,6 +124,8 @@ import { Snackbar } from '@mui/material';
 
           </Alert>
         </Snackbar>
+      </div>
+        
       </>
     )
   }
