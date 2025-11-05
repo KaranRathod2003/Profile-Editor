@@ -76,7 +76,7 @@ import { useEffect } from 'react';
     }
     const handleSave = () => {
       if(!profileData._id){
-        axios.post(`${apirurl}/api/profile", profileData`)
+        axios.post(`${apirurl}/api/profile`, profileData)
         .then(res =>{
           setProfileData(res.data);
           setIsEditing(false)
