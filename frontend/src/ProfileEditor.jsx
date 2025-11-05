@@ -18,10 +18,11 @@ import { useEffect } from 'react';
       type:""
     })
     const [backupProfileData, setBackupProfileData] = useState(profileData);
+    const apirurl = 'https://profilepro-one.vercel.app'
 
 
     useEffect(()=>{
-      axios.get("http://localhost:5000/api/profile")
+      axios.get(`${apirurl}/api/profile`)
       .then(res =>{
         console.log("Profile Data: ", res.data);
         setProfileData(res.data);
@@ -75,7 +76,7 @@ import { useEffect } from 'react';
     }
     const handleSave = () => {
       if(!profileData._id){
-        axios.post("http://localhost:5000/api/profile", profileData)
+        axios.post(`${apirurl}/api/profile", profileData`)
         .then(res =>{
           setProfileData(res.data);
           setIsEditing(false)
@@ -87,7 +88,7 @@ import { useEffect } from 'react';
         })
       }
       else{
-        axios.put(`http://localhost:5000/api/profile`, profileData)
+        axios.put(`${apirurl}/api/profile`, profileData)
         .then(res =>{
           setProfileData(res.data);
           setIsEditing(false);
